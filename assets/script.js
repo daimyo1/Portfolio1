@@ -56,3 +56,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+const projectThumbnails = document.querySelectorAll('.project-thumbnails img');
+
+projectThumbnails.forEach(thumbnail => {
+  thumbnail.addEventListener('click', function() {
+    window.open(this.parentElement.href, '_blank'); // Open link in a new tab
+  });
+});
