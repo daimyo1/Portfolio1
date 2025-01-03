@@ -176,7 +176,7 @@ nav {
     width: 80%; /* Set container to take 80% of the screen width on small devices */
     margin: 0 auto; /* Center the container horizontally */
     padding: 2px;
-    margin-left: -5px; /* Shift container 5px to the left */
+    margin-left: -10px; /* Shift container 5px to the left */
   }
 
   #pong-game-canvas {
