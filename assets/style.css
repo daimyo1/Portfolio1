@@ -22,6 +22,21 @@ nav {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Styling for the game button */
+
+
+/* Styling for the Pong game container */
+#pong-game-container {
+  display: flex; /* Visible by default */
+  width: 300px; /* Set the game size */
+  height: 100px;
+  background-color: #FF6201;
+  border-radius: 10px;
+  z-index: 9999;
+}
+
+/* Game canvas styles */
+
 .dropbtn {
   background-color: #ffffff; /* Bright orange */
   padding: 16px;
