@@ -95,12 +95,19 @@ let ballSpeedX = 0.8, ballSpeedY = 0.8; // Slower ball speed
 let leftPaddleY = pongCanvas.height / 2 - paddleHeight / 2;
 let rightPaddleY = pongCanvas.height / 2 - paddleHeight / 2;
 
-// Control paddles with mouse
+// Control paddles with mouse (desktop)
 let mouseY = pongCanvas.height / 2;
 
-// Track mouse movement
+// Track mouse movement for desktop
 pongCanvas.addEventListener('mousemove', function(event) {
   mouseY = event.offsetY; // Get the mouse Y position relative to the canvas
+});
+
+// Track touch movement for mobile
+pongCanvas.addEventListener('touchmove', function(event) {
+  event.preventDefault(); // Prevent default touch scrolling
+  let touch = event.touches[0]; // Get the first touch point
+  mouseY = touch.clientY - pongCanvas.getBoundingClientRect().top; // Convert touch position to canvas coordinates
 });
 
 // Hover-to-start game logic
@@ -124,7 +131,7 @@ function drawPong() {
   pongCtx.fill();
   pongCtx.closePath();
 
-  // Left paddle movement based on mouse position
+  // Left paddle movement based on mouse or touch position
   leftPaddleY = mouseY - paddleHeight / 2;
 
   // Prevent left paddle from going out of bounds
