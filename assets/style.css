@@ -151,20 +151,33 @@ nav {
     grid-template-columns: 1fr; /* Stack the items in a single column on smaller screens */
   }
 
-  /* Adjust game container width for smaller screens */
+  //* Base canvas and container styling */
+#pong-game-container {
+  width: 100%; /* Make the container take the full width of its parent */
+  height: auto; /* Adjust height based on content */
+  display: flex; /* Centers the canvas within the container */
+  justify-content: center; /* Center canvas horizontally */
+  align-items: center; /* Center canvas vertically */
+}
+
+/* Base canvas styling */
+#pong-game-canvas {
+  width: 100%; /* Ensures canvas uses full width of its container */
+  height: auto; /* Automatically adjusts height based on width */
+  max-width: 300px; /* Limit the canvas size to a max width */
+}
+
+/* Media query for small screen sizes */
+@media (max-width: 600px) {
   #pong-game-container {
-    width: 50%; /* Increased width on smaller screens */
-    max-width: 250px; /* Maximum width adjustment */
-    height: 200px; /* Fixed height for better scaling */
-    margin: 20px auto; /* Adjust margin for better spacing */
+    width: 80%; /* Set container to take 80% of the screen width on small devices */
+    margin: 0 auto; /* Center the container horizontally */
   }
 
-  /* Ensure the canvas adapts well */
   #pong-game-canvas {
-    height: 100%; /* Maintain responsive height */
-    width: 100%; /* Ensure canvas fills container */
+    max-width: 100%; /* Allow the canvas to take 100% width of the container */
   }
-
+}
   /* Navbar padding and font size for mobile */
   nav {
     padding: 10px;
