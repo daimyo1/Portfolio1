@@ -170,7 +170,7 @@ nav {
 }
 
 /* Media query for small screen sizes */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   #pong-game-container {
     width: 80%; /* Set container to take 80% of the screen width on small devices */
     margin: 0 auto; /* Center the container horizontally */
