@@ -172,6 +172,7 @@ nav {
   #pong-game-container {
     width: 80%; /* Set container to take 80% of the screen width on small devices */
     margin: 0 auto; /* Center the container horizontally */
+    padding: 2px;
   }
 
   #pong-game-canvas {
