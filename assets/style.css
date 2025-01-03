@@ -153,8 +153,16 @@ nav {
 
   /* Adjust game container width for smaller screens */
   #pong-game-container {
-    width: 90%;
-    height: auto;
+    width: 90%; /* Increased width on smaller screens */
+    max-width: 250px; /* Maximum width adjustment */
+    height: 200px; /* Fixed height for better scaling */
+    margin: 20px auto; /* Adjust margin for better spacing */
+  }
+
+  /* Ensure the canvas adapts well */
+  #pong-game-canvas {
+    height: 100%; /* Maintain responsive height */
+    width: 100%; /* Ensure canvas fills container */
   }
 
   /* Navbar padding and font size for mobile */
