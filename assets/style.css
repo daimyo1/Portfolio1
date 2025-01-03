@@ -153,7 +153,7 @@ nav {
 
   /* Adjust game container width for smaller screens */
   #pong-game-container {
-    width: 90%; /* Increased width on smaller screens */
+    width: 50%; /* Increased width on smaller screens */
     max-width: 250px; /* Maximum width adjustment */
     height: 200px; /* Fixed height for better scaling */
     margin: 20px auto; /* Adjust margin for better spacing */
