@@ -158,7 +158,6 @@ nav {
     display: flex; /* Centers the canvas within the container */
     justify-content: center; /* Center canvas horizontally */
     align-items: center; /* Center canvas vertically */
-    padding: 4px;
   }
 
   /* Base canvas styling */
@@ -174,7 +173,6 @@ nav {
   #pong-game-container {
     width: 80%; /* Set container to take 80% of the screen width on small devices */
     margin: 0 auto; /* Center the container horizontally */
-    padding: 2px;
   }
 
   #pong-game-canvas {
@@ -184,7 +182,7 @@ nav {
 
   /* Additional space between game and social icons */
   #pong-game-container {
-    margin-bottom: 40px; /* More space between game and social icons */
+    margin-bottom: 20px; /* More space between game and social icons */
   }
 
   .social-icons {
