@@ -151,20 +151,22 @@ nav {
     grid-template-columns: 1fr; /* Stack the items in a single column on smaller screens */
   }
 
-  //* Base canvas and container styling */
-#pong-game-container {
-  width: 100%; /* Make the container take the full width of its parent */
-  height: auto; /* Adjust height based on content */
-  display: flex; /* Centers the canvas within the container */
-  justify-content: center; /* Center canvas horizontally */
-  align-items: center; /* Center canvas vertically */
-}
+  /* Base canvas and container styling */
+  #pong-game-container {
+    width: 100%; /* Make the container take the full width of its parent */
+    height: auto; /* Adjust height based on content */
+    display: flex; /* Centers the canvas within the container */
+    justify-content: center; /* Center canvas horizontally */
+    align-items: center; /* Center canvas vertically */
+    padding: 4px;
+  }
 
-/* Base canvas styling */
-#pong-game-canvas {
-  width: 100%; /* Ensures canvas uses full width of its container */
-  height: auto; /* Automatically adjusts height based on width */
-  max-width: 300px; /* Limit the canvas size to a max width */
+  /* Base canvas styling */
+  #pong-game-canvas {
+    width: 100%; /* Ensures canvas uses full width of its container */
+    height: auto; /* Automatically adjusts height based on width */
+    max-width: 300px; /* Limit the canvas size to a max width */
+  }
 }
 
 /* Media query for small screen sizes */
@@ -172,23 +174,32 @@ nav {
   #pong-game-container {
     width: 80%; /* Set container to take 80% of the screen width on small devices */
     margin: 0 auto; /* Center the container horizontally */
-    padding-right: 2px;
+    padding: 2px;
   }
 
   #pong-game-canvas {
     max-width: 100%; /* Allow the canvas to take 100% width of the container */
   }
-}
-  /* Navbar padding and font size for mobile */
-  nav {
-    padding: 10px;
-    font-size: 14px;
+
+  /* Additional space between game and social icons */
+  #pong-game-container {
+    margin-bottom: 40px; /* More space between game and social icons */
   }
 
-  /* Ensure the dropdown is more responsive on mobile */
-  .dropdown-content {
-    min-width: 140px; /* Adjust dropdown width */
+  .social-icons {
+    margin-top: 20px; /* Adjust social icon space if necessary */
   }
+}
+
+/* Navbar padding and font size for mobile */
+nav {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Ensure the dropdown is more responsive on mobile */
+.dropdown-content {
+  min-width: 140px; /* Adjust dropdown width */
 }
 
 #lightbox-overlay {
