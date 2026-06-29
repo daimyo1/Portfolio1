@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Jose Arambula Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <aside class="sidebar">
+    <a href="#home" class="logo">JA</a>
+
+    <nav class="side-nav">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#" id="resumeBtn">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="duel-widget">
+      <button class="duel-launch" id="duelLaunch" type="button">DUEL</button>
+
+      <div class="duel-panel" id="duelPanel" aria-hidden="true">
+        <canvas id="duelCanvas" width="120" height="90"></canvas>
+        <button id="duelToggle" type="button">Play</button>
+        <p class="duel-help">A/D move · Space slash</p>
+      </div>
+    </div>
+
+    <div class="socials">
+      <a href="https://linkedin.com/in/cooktolearn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+
+      <a href="https://github.com/daimyo1" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <section id="home" class="hero">
+      <button class="portrait-wrap" id="portraitButton" type="button" aria-label="Open portrait artwork">
+        <img src="assets/images/self.png" alt="Black and white portrait of Jose Arambula" />
+      </button>
+
+      <div class="hero-copy">
+        <p class="kicker">Professional Portfolio</p>
+
+        <h1>Jose<br />Arambula</h1>
+
+        <h2>Graphic Designer</h2>
+
+        <div class="job">
+          <span>Graphics Coordinator</span>
+          <span>Exhibit Happy · Steelhead</span>
+          <small>Current Position</small>
+        </div>
+
+        <p class="intro">
+          I'm a graphic designer and production-minded creative working across
+          branding, exhibit graphics, illustration, and front-end development.
+          My background spans culinary leadership, print production, QA testing,
+          and design, giving me a practical approach to solving creative problems.
+          I enjoy building visual systems that are bold, functional, and memorable,
+          while always looking for new ways to blend technology with storytelling.
+        </p>
+
+        <div class="hero-tags">
+          <span>Brand Identity</span>
+          <span>Production Graphics</span>
+          <span>Illustration</span>
+          <span>UI / UX</span>
+          <span>Front-End</span>
+          <span>Creative Coding</span>
+        </div>
+
+        <a href="#projects" class="button">View Projects</a>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="section-title minimal-title">
+        <h2>Projects</h2>
+      </div>
+
+      <article class="project" data-project="visia">
+        <img src="assets/visia/header.png" alt="VisiaVerse brand identity project" />
+
+        <div class="project-copy">
+          <span>01</span>
+          <h3>VisiaVerse</h3>
+          <p>Brand Identity / Environmental Graphics / Concept Development</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="bask">
+        <img src="assets/bask/Gift Bag Mockup.png" alt="BASK Surf Shop brand system project" />
+
+        <div class="project-copy">
+          <span>02</span>
+          <h3>BASK Surf Shop</h3>
+          <p>Retail Branding / Packaging / Promotional Design</p>
+        </div>
+      </article>
+
+      <article class="project" data-project="experimental">
+        <img src="assets/experimental/Complimentary.png" alt="Experimental illustration project" />
+
+        <div class="project-copy">
+          <span>03</span>
+          <h3>Experimental!</h3>
+          <p>Digital Art / Mixed Media / Photography</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="about" class="about">
+      <p class="kicker">About</p>
+
+      <h2>Design, production, and controlled chaos.</h2>
+
+      <p>
+        My work connects graphic design, production graphics, illustration, and front-end thinking.
+        I like building systems that look strong, communicate clearly, and feel intentional.
+      </p>
+
+      <p>
+        Before moving deeper into design and technology, I spent years working in fast-paced kitchens.
+        That background still shapes how I work today: stay organized, solve problems quickly,
+        respect the details, and keep the final experience in mind.
+      </p>
+    </section>
+
+    <footer id="contact" class="footer">
+      <h2>Let’s create something.</h2>
+      <p><a href="mailto:Ja.mise.en.place@gmail.com">Ja.mise.en.place@gmail.com</a></p>
+    </footer>
+  </main>
+
+  <section class="case-page" id="casePage" aria-hidden="true">
+  <button class="back-case" type="button">← Back to Projects</button>
+
+  <div class="case-page-inner">
+
+    <p id="caseLabel" class="case-kicker"></p>
+
+    <h2 id="caseTitle"></h2>
+
+    <p id="caseDescription"></p>
+
+    <img id="caseImage" src="" alt="" />
+
+    <div class="case-gallery" id="caseGallery"></div>
+
+    <!-- NEW PROJECT NOTES -->
+    <div class="case-notes">
+      <h3>Project Notes</h3>
+      <p id="caseNotes"></p>
+    </div>
+
+    <div class="case-grid">
+
+      <div>
+        <h3>Role</h3>
+        <p id="caseRole"></p>
+      </div>
+
+      <div>
+        <h3>Tools</h3>
+
+        <div class="tool-icons">
+          <span>Ai</span>
+          <span>Ps</span>
+          <span>Id</span>
+        </div>
+
+        <p id="caseTools"></p>
+      </div>
+
+      <div>
+        <h3>Deliverables</h3>
+        <p id="caseDeliverables"></p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <section class="portrait-modal" id="portraitModal" aria-hidden="true">
+    <button class="close-portrait" type="button">Close</button>
+
+    <img
+      src="assets/images/selfexpanded.png"
+      alt="Expanded experimental black and white portrait of Jose Arambula"
+    />
+  </section>
+
+  <section class="resume-modal" id="resumeModal" aria-hidden="true">
+    <button class="close-resume" type="button">Close</button>
+
+    <div class="resume-inner">
+      <iframe src="assets/images/JOSE.A.pdf" title="Jose Arambula Resume"></iframe>
+
+      <a class="download-resume" href="assets/images/JOSE.A.pdf" target="_blank" rel="noopener noreferrer">
+        Open Resume in New Tab
+      </a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
